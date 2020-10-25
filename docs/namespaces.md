@@ -8,8 +8,8 @@ important to understand the security model and how one can use Fleet in a multi-
 
 The primary types are all scoped to a namespace. All selectors for `GitRepo` targets will be evaluated against
 the `Clusters` and `ClusterGroups` in the same namespaces. This means that if you give `create` or `update` privileges
-to a the `GitRepo` type in a namespace, that end user can modify the selector to match any cluster in that namespace.
-This means in practice if you want to have two teams self manage their own `GitRepo` registrations but they should
+to the `GitRepo` type in a namespace, the end user can modify the selector to match any cluster in that namespace.
+Thus if you want to have two teams self manage their own `GitRepo` registrations but they should
 not be able to target each others clusters, they should be in different namespaces.
 
 ## Special Namespaces
